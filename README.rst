@@ -83,6 +83,7 @@ The `AUTOCOMPLETE_BACKEND` setting allows you to specify which backend to use fo
 
 * completion.backends.db_backend.DatabaseAutocomplete
 * completion.backends.redis_backend.RedisAutocomplete
+* completion.backends.django_redis_backend.DjangoRedisAutocomplete
 * completion.backends.solr_backend.SolrAutocomplete
 
 
@@ -94,6 +95,12 @@ Make sure that you have `Redis <http://github.com/antirez/redis/>`_ and `redis-p
 Add something like the following to your settings file, where the connection string is <host name>:<port>:<database> ::
 
     AUTOCOMPLETE_REDIS_CONNECTION = 'localhost:6379:0'
+
+
+Configuring Django-Redis
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Make sure that you have `django-redis <https://github.com/niwibe/django-redis/>`_ installed.
 
 
 Configuring Solr
