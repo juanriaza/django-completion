@@ -18,6 +18,13 @@ else:
         from completion.completion_tests.redis_backend import *
 
 try:
+    from redis_cache import get_redis_connection
+except ImportError:
+    warnings.warn('Skipping django-redis backend tests, django-redis not installed')
+else:
+    from completion.completion_tests.django_redis_backend import *
+
+try:
     import pysolr
 except ImportError:
     warnings.warn('Skipping solr backend tests, pysolr not installed')
